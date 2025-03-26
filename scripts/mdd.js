@@ -125,11 +125,14 @@ async function mdd() {
     await task("查询关注状态", "/api/member/profile.action", {
         memberUuid: "e3f799b3eeac4f2eaa5ea70b0289c67a"
     }).then(async (res) => {
+    // 已移除关注逻辑，无论条件如何都不会执行关注
+  /* 原关注代码（已禁用）
         if (res.data.followType == 0) {
             await task("关注我", "/api/member/followMember.action", {
                 memberUuid: "e3f799b3eeac4f2eaa5ea70b0289c67a"
             })
         }
+  */
     })
 
 //快速帖子评论
